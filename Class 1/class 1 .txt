@@ -1,0 +1,1 @@
+To create the new project => composer create-project laravel/laravel Exmaple1 
