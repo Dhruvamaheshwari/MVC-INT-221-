@@ -1,0 +1,5 @@
+To create the new project => composer create-project laravel/laravel {project name}
+
+// Command to run the project
+    1. cd project name
+    2. php artisan server
