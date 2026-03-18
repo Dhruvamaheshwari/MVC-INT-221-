@@ -2,4 +2,15 @@ To create the new project => composer create-project laravel/laravel {project na
 
 // Command to run the project
     1. cd project name
-    2. php artisan server
+    2. php artisan serve
+
+
+
+php artisan make:view {view name}
+
+
+
+
+//task =>  creating a routing url /home/details/mine it will return {view } that can display 5 subj. with marks and
+            2nd url is home/details/name in this url you have to demonstreate the working of name route and 
+            3rd url home/details/group heare data passing method is applyed to showcase your 5 certification
