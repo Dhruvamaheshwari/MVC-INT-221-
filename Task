@@ -1,0 +1,12 @@
+
+//task 1 =>  creating a routing url /home/details/mine it will return {view } that can display 5 subj. with marks and
+            2nd url is home/details/name in this url you have to demonstreate the working of name route and 
+            3rd url home/details/group heare data passing method is applyed to showcase your 5 certification
+
+
+// task 2 => create 3 rotues with the url {1. home/detail/info} , {2. home/detail/data} , {3. home/detail/storage} in the first rotue 
+            you have to display a string giveing the intoduction {hey i am abc} then you have to make the string reverse
+            in the 2 rotue u have to demonstreate the working of named rotue name rote is rendered on the my-view 
+            and in the 3 rotue you have to display the pattern for right angle tringle 
+            and make sure these three routeing should be grouped under prefix task 
+            and appared from this you have to demonstreate the working of fall back rotue

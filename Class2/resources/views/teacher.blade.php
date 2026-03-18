@@ -1,1 +1,1 @@
-{{$time}}
+<h1>Hi i am Teacher</h1>

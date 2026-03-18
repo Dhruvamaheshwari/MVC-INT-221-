@@ -3,5 +3,4 @@
     <p>{{$courses[$i]}} => {{$mark[$i]}}</p>
     @endfor -->
 
-
 {{$time}}
