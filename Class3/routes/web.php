@@ -19,7 +19,7 @@ Route::get('/mul/{a}/{b}' ,[CalciisController::class,'mul']);
 Route::get('/div/{a}/{b}' ,[CalciisController::class,'div']);
 
 // this is Invokable Controller
-//Route::get('/invokingis/{id}' , InvokableIsController::class);
+Route::get('/invokingis/{id}' , InvokableIsController::class);
 
 
 // this is Resource {no need to give the route like '/demo' ye khud se dekh lega kha jana h}
