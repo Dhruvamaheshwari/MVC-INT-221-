@@ -1,1 +1,0 @@
-<a href="{{ route('data') }}">Click here to see name Route</a>

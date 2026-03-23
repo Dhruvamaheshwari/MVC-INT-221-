@@ -7,3 +7,9 @@
 
 
 php artisan make:view {view name}
+
+------------------------------------------------------------------------------------------------------
+UNIT -3
+to create the Basic controller -> php artisan make:controller FirstIsController
+to create invokable controller -> php artisan make:controller InvokableIsController --invokable
+to create resource controller -> php artisan make:controller ResourcesIsController --resource

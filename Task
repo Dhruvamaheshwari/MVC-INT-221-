@@ -1,4 +1,4 @@
-
+UNIT-2
 //task 1 =>  creating a routing url /home/details/mine it will return {view } that can display 5 subj. with marks and
             2nd url is home/details/name in this url you have to demonstreate the working of name route and 
             3rd url home/details/group heare data passing method is applyed to showcase your 5 certification
@@ -10,3 +10,8 @@
             and in the 3 rotue you have to display the pattern for right angle tringle 
             and make sure these three routeing should be grouped under prefix task 
             and appared from this you have to demonstreate the working of fall back rotue
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+UNIT-3
+create the the conroller calci there you perfome the 4 methon you can either user direct val pass as a parameer in the fun. or u can use the new url to show the result
