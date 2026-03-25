@@ -14,4 +14,8 @@ UNIT-2
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 UNIT-3
-create the the conroller calci there you perfome the 4 methon you can either user direct val pass as a parameer in the fun. or u can use the new url to show the result
+task 1 => create the the conroller calci there you perfome the 4 methon you can either user direct val pass as a parameer in the fun. or u can use the new url to show the result
+
+task 2 => create 1 rotue fuc. in which you have to pass name and reg.no and you have to display that with the help of echo
+
+task 3 => create a controller with your name create 2 method inside the controller which will print the 1. name of your in rever. and 2. will rever. the no. you have to add it to corresponding url which whould be fun/1/rev fun/rev/num {thsi url add in web}

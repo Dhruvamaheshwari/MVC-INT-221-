@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -67,15 +68,61 @@ Route::get('/back' , function(){
 
 //?---------------------------------Unit 3----------------------------------------
 
-use App\Http\Controllers\FirstIsController;
-use App\Http\Controllers\InvokableIsController;
-use App\Http\Controllers\ResourcesIsController;
+/*
+    use App\Http\Controllers\FirstIsController;
+    use App\Http\Controllers\InvokableIsController;
+    use App\Http\Controllers\ResourcesIsController;
 
-Route::get('/profile' , [FirstIsController::class , 'profile']);
-Route::get('/display/{id}' , [FirstIsController::class , "display"]);
+    Route::get('/profile' , [FirstIsController::class , 'profile']);
+
+    Route::get('/display/{id}' , [FirstIsController::class , "display"]);
 
 
-Route::get('/invokableiscontroller/{id}' , InvokableIsController::class);
+    Route::get('/invokableiscontroller/{id}' , InvokableIsController::class);
 
 
-Route::resource('todo' , ResourcesIsController::class);
+    Route::resource('todo' , ResourcesIsController::class);
+ */
+
+//?--------------------------------------Task---------------------------------------
+/*
+//todo ------------------------------1-------------------------
+//  first way to do this {Using closure}
+Route::get('/hello' , function(){
+    return "Hello Dhruva Maheshwari";
+});
+
+Route::get('/about' , function(){
+    return "This is Abour page";
+});
+
+Route::get('/contact' , function(){
+    return "This is the contact page";
+});
+
+
+use App\Http\Controllers\Task1IsController;
+// Second way to do this {Using controller}
+Route::get('/hello-controller' , [Task1IsController::class , 'hello']);
+Route::get('/about-controller' , [Task1IsController::class , "about"]);
+Route::get('/contact-controller' , [Task1IsController::class , "contact"]);
+ */
+
+/*
+//todo--------------------------------------2-------------------------
+Route::get('/user/{name?}' , function($name = "guest"){
+    return 'Welcome '.$name;
+});
+ */
+
+//? to create the api controller
+/*
+use App\Http\Controllers\APIIsController;
+Route::apiResource('api' , APIIsController::class);
+ */
+
+
+//? to create the middeleware
+use App\Http\Controllers\MiddlewareIsController;
+
+Route::get('/rich', [MiddlewareIsController::class, "show"])->middleware('checkRoleandAge');

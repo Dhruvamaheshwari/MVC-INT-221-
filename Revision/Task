@@ -1,0 +1,17 @@
+✅ Task 1: Basic Routing (Easy)
+
+    👉 Create 3 routes:
+        /hello → return "Hello Dhruva"
+        /about → return "This is About Page"
+        /contact → return "Contact Page"
+
+    👉 Try both ways:
+        Using closure
+        Using controller
+
+✅ Task 2: Route Parameters (Easy)
+    👉 Create route: /user/{name}
+
+    👉 Output: Welcome Dhruva
+
+    👉 Bonus: Make name optional (/user/{name?})

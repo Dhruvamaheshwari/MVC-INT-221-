@@ -11,7 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+
+        // in this function we have to registure the middleware
+        
+        $middleware -> alias([
+        'checkRoleandAge' => App\Http\Middleware\MiddlewareIS::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
