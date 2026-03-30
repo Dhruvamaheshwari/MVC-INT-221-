@@ -143,4 +143,7 @@ Route::get('/open' , [Task4Controller::class , "show"]);
 Route::view('/signin' , 'signin');
 Route::view('/signout' , 'signout');
 
-
+//? task5
+Route::view('/about' , 'about');
+Route::view('/contact' , 'contact');
+Route::view('/blog' , 'blog');
