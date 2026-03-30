@@ -24,6 +24,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware -> alias([
             'ageChecking' => App\Http\Middleware\ConstructMiddleware::class
         ]);
+
+        $middleware -> alias([
+            'checkNameCountry' => App\Http\Middleware\Task4Middleware::class,
+        ]);
+
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

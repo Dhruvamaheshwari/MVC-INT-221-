@@ -134,5 +134,9 @@ use App\Http\Controllers\ConstructController;
 Route::get('/construct' , [ConstructController::class , 'show']);
 
 
+//? task 4
+use App\Http\Controllers\Task4Controller;
+Route::get('/open' , [Task4Controller::class , "show"]);
+
 
 
