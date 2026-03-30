@@ -47,3 +47,32 @@ Route::get('/task2' , function(){
     echo "123";
 });
 
+
+// this is the Contruct middleware
+use App\Http\Controllers\ConstructController;
+Route::get('/constructmid' , [ConstructController::class , 'privacy']);
+
+
+// this is tamplate inheritance
+Route::view('/signin', 'signin');
+Route::view('/signout', 'singnout');
+
+
+// group routeing with prefix
+use App\Http\Controllers\EasyController;
+/*
+Route::prefix('master') -> controller(EasyController::class) -> group(function(){
+
+    Route::get('/student' , 'show');
+    Route::get('/teacher/{id}' , 'display');
+
+});
+ */
+
+// group routeing without prefix
+Route::controller(EasyController::class)->group(function(){
+    Route::get('/student' , 'show');
+    Route::get('/teacher/{id}' , 'display');
+});
+
+

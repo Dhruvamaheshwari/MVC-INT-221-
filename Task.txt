@@ -19,3 +19,18 @@ task 1 => create the the conroller calci there you perfome the 4 methon you can 
 task 2 => create 1 rotue fuc. in which you have to pass name and reg.no and you have to display that with the help of echo
 
 task 3 => create a controller with your name create 2 method inside the controller which will print the 1. name of your in rever. and 2. will rever. the no. you have to add it to corresponding url which whould be fun/1/rev fun/rev/num {thsi url add in web}
+
+taske 4 => you have to set a constrain of 
+            country and name === dhruva & 
+            country === india {isse url open ho}
+
+taske 5 => create 3 view blog , about, contact 
+            add your bio and image inside about 
+            add your sotialmidea acc. detail in contect 
+            and in blog add blog 5 change req. asked in paliyament
+
+task 6 => now you have to create 1 main folder which is mainlayout inside that 
+        app.blade.php that will showcase the nav.bar 
+        {inline } and there should be 1 img. 
+        present that can have w-230 h-200 
+        and in footer you have to add "we will get placed 1cr"

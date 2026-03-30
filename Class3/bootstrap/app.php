@@ -25,7 +25,14 @@ return Application::configure(basePath: dirname(__DIR__))
 
 
         // globle middleware to apply all project
-        $middleware -> append(GlobalIsMiddleware::class);
+        //$middleware -> append(GlobalIsMiddleware::class);
+        
+        // this is the Construct middleware`
+        /*
+            $middleware->alias([
+                'ageFactor' => App\Http\Middleware\ConstructMiddleware::class
+            ]);
+         */
 
     })
     ->withExceptions(function (Exceptions $exceptions): void {
