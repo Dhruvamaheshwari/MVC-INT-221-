@@ -14,8 +14,15 @@ return Application::configure(basePath: dirname(__DIR__))
 
         // in this function we have to registure the middleware
         
+        /*
+            $middleware -> alias([
+            'checkRoleandAge' => App\Http\Middleware\MiddlewareIS::class,
+            ]);
+         */
+            
+        // registure the Construct middleware
         $middleware -> alias([
-        'checkRoleandAge' => App\Http\Middleware\MiddlewareIS::class,
+            'ageChecking' => App\Http\Middleware\ConstructMiddleware::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

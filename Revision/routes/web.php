@@ -123,6 +123,16 @@ Route::apiResource('api' , APIIsController::class);
 
 
 //? to create the middeleware
+/*
 use App\Http\Controllers\MiddlewareIsController;
 
 Route::get('/rich', [MiddlewareIsController::class, "show"])->middleware('checkRoleandAge');
+ */
+
+//? import the construct Controllers
+use App\Http\Controllers\ConstructController;
+Route::get('/construct' , [ConstructController::class , 'show']);
+
+
+
+
