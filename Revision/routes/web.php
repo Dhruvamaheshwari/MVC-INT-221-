@@ -139,4 +139,8 @@ use App\Http\Controllers\Task4Controller;
 Route::get('/open' , [Task4Controller::class , "show"]);
 
 
+//? this is the Template inheritance
+Route::view('/signin' , 'signin');
+Route::view('/signout' , 'signout');
+
 
