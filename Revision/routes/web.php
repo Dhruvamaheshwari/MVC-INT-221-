@@ -147,3 +147,22 @@ Route::view('/signout' , 'signout');
 Route::view('/about' , 'about');
 Route::view('/contact' , 'contact');
 Route::view('/blog' , 'blog');
+
+
+//? Routing with condition using the group
+// this is the Router level routing;
+use App\Http\Controllers\ConditionController;
+/*
+Route::controller(ConditionController::class)->group(function(){
+    Route::get('/username/{name}' , 'username')->where('name' , '[a-zA-Z]+');
+    Route::get('/userage/{age}' , 'userage')->where('age' , '[0-9]+');
+    Route::get('/userid/{userid}' , 'userid')->where('userid' , '[0-9a-zA-Z]+');
+});
+ */
+
+// this is the Globle level routing;
+Route::controller(ConditionController::class)->group(function(){
+    Route::get('/username/{name}' , 'username');
+    Route::get('/userage/{age}' , 'userage');
+    Route::get('/userid/{userid}' , 'userid');
+});
