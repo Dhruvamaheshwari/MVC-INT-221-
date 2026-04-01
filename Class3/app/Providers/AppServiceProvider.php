@@ -4,6 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+
+// import this line
+use Illuminate\Support\Facades\Route;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -19,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // add the routing globley
+        // Route::pattern('name', '[A-Za-z]+');
     }
 }

@@ -15,4 +15,14 @@ class EasyController extends Controller
     {
         return 'the id is '.$id;
     }
+
+    
+    public function displayname($name)
+    {
+        return 'the name is '.$name;
+    }
+    public function user($name)
+    {
+        return 'the username is '.$name;
+    }
 }
