@@ -166,3 +166,25 @@ Route::controller(ConditionController::class)->group(function(){
     Route::get('/userage/{age}' , 'userage');
     Route::get('/userid/{userid}' , 'userid');
 });
+
+//? php output
+Route::get('/print' , function(){
+
+    /// this is the first way to this
+    $name = "Dhruva Maheshwari";
+    echo "my name is: ".$name;
+
+    echo "<br>";
+    /// this is the second way to this;
+    $age = 23;
+    var_dump($age , $name);
+
+     echo "<br>";
+    /// this is the 3 way to this;
+    $user = ['Dhruva Maheswari' , 'user2' , "user3"];
+    print_r($user);
+
+    /// create the view name success
+    // return view('success' , compact('user')); /// 1 way to return the view with the value
+    return view('success' , ['user' => $user]); /// 2 way to return the view with the value
+});
