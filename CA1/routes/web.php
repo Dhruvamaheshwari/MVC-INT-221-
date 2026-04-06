@@ -36,3 +36,27 @@ Route::get('/show/{name}/{age}' , [Task3Controller::class , 'show']);
 Route::get('/invalid' , function(){
     return 'this is invalid age';
 });
+
+// Task 4
+// prefix with the Group routing
+Route::prefix('master')->group(function(){
+    Route::get('/name' , function(){
+        return 'this is the prefix route';
+    });
+    Route::get('/contact' , function(){
+        return "this is the prefix with group route";
+    });
+});
+
+// With-out prefisx route
+Route::group([] , function(){
+    Route::get('/username' , function(){
+        return 'this is group route';
+    });
+    Route::get('/usecotact' , function(){
+        return 'this is without prefix group route';
+    });
+});
+Route::fallback(function(){
+    return "invalid URL";
+});
