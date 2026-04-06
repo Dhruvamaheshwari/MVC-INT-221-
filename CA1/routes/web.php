@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,4 +27,12 @@ Route::get('/id/{id}' , function($id){
 });
 Route::get('/error' , function(){
     return 'Invalid user';
+});
+
+// Task 3;
+use App\Http\Controllers\Task3Controller;
+Route::get('/show/{name}/{age}' , [Task3Controller::class , 'show']);
+
+Route::get('/invalid' , function(){
+    return 'this is invalid age';
 });
