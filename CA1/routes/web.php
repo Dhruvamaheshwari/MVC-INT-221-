@@ -60,3 +60,11 @@ Route::group([] , function(){
 Route::fallback(function(){
     return "invalid URL";
 });
+
+
+//?-----------------------------------UNIT 3
+
+// Task 1
+use App\Http\Controllers\StudentController;
+Route::get('/show' , [StudentController::class , 'show']);
+Route::get('/student/details' , [StudentController::class , 'details']);
