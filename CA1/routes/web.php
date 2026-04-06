@@ -68,3 +68,17 @@ Route::fallback(function(){
 use App\Http\Controllers\StudentController;
 Route::get('/show' , [StudentController::class , 'show']);
 Route::get('/student/details' , [StudentController::class , 'details']);
+
+// Task 2
+Route::view('/login' , 'signin');
+Route::view('/logout' , 'signout');
+
+// Task 2
+Route::get('/dashboard' , function(){
+    return 'This is the dashboard';
+})->name('dashboard.page');
+
+Route::get('/home' , function(){
+    return redirect()->route('dashboard.page');
+});
+
