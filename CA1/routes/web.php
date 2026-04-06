@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+
+// Task 1
+Route::get('/show/{name}' ,function($name) {
+    return view('info' , compact('name'));
 });
