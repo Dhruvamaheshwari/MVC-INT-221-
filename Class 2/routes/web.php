@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 
 /* 
-    // 1. This is  Required routing {not return the view}
+    /// 1. This is  Required routing {not return the view}
     Route::get('/user/{name}', function ($name) {
         return "Hello I am : " . $name; // {.}  for concat 
     });
@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Request;
 
 
 /* 
-    // 2. This is  Multivalue routing {you give the as many argument}
+    /// 2. This is  Multivalue routing {you give the as many argument}
     Route::get('/user/{name}/{id}', function ($name , $id) {
         return "Hello I am : " . $name . $id; // {.}  for concat 
     });
@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Request;
 
 
 /* 
-    // 3. This is  Optional routing {optional name do ya nhi do jo hamne defautl diya h usko hi lega}
+    /// 3. This is  Optional routing {optional name do ya nhi do jo hamne defautl diya h usko hi lega}
     Route::get('/user/{name?}', function ($name="New_User") {
         return "Hello I am : " . $name; // {.}  for concat 
     });
@@ -30,29 +30,29 @@ use Illuminate\Support\Facades\Request;
 
 
 /* 
-    // 4. This is  Constraint routing {Constraint routing with number}
+    /// 4. This is  Constraint routing {Constraint routing with number}
     Route::get('/user/{id}', function ($id) {
         return "Hello My Id is : " . $id; // {.}  for concat 
     })-> where('id' , '[0-9]{4}+');
 
-    // Constraint routing with name
+    /// Constraint routing with name
     Route::get('/user/{name}', function ($name) {
         return "Hello My name is : " . $name; // {.}  for concat 
     })-> where('name' , '[a-zA-Z]+');
 */
 
 /*
-    // 4. This is  Constraint routing {Constraint routing with number}
+    /// 4. This is  Constraint routing {Constraint routing with number}
     Route::get('/user/{id}', function ($id) {
         return "Hello My Id is : " . $id; // {.}  for concat 
     })-> where('id' , '[0-9]+');
 
-    // 4. This is  Constraint routing {Constraint routing with number and spe. number is 3 only}
+    /// 4. This is  Constraint routing {Constraint routing with number and spe. number is 3 only}
     Route::get('/user/{id}', function ($id) {
         return "Hello My Id is : " . $id; // {.}  for concat 
     })-> where('id' , '[0-9]{3}');
 
-    // 4. This is  Constraint routing {Constraint routing with number and spe. number is 3 to 7 range}
+    /// 4. This is  Constraint routing {Constraint routing with number and spe. number is 3 to 7 range}
     Route::get('/user/{id}', function ($id) {
         return "Hello My Id is : " . $id; // {.}  for concat 
     })-> where('id' , '[0-9]{3 , 7}');
@@ -60,7 +60,7 @@ use Illuminate\Support\Facades\Request;
 
 
 /* 
-    // 5. fallBack Routing {if page not present in the project so this route work}
+    /// 5. fallBack Routing {if page not present in the project so this route work}
     Route::get('/home' , function() {
         return "hi my name is Dhruva Maheshwari";
     });
@@ -74,8 +74,8 @@ use Illuminate\Support\Facades\Request;
     });
 */
 /* 
-// 6. Group Routing with prefix (for the safty)
-    Route::prefix('master')->group(function () {
+/// 6. Group Routing with prefix (for the safty)
+    Route::prefix('master')->group(function() {
         Route::get('/home', function () {
             return "hi my name is Dhruva Maheshwari";
         });
@@ -88,7 +88,7 @@ use Illuminate\Support\Facades\Request;
 
 
 /*
-    // 7. Group Routing with-out prefix (for the safty)
+    /// 7. Group Routing with-out prefix (for the safty)
     Route::group([], function () {
         Route::get('/home', function () {
             return "hi my name is Dhruva Maheshwari";
@@ -101,7 +101,7 @@ use Illuminate\Support\Facades\Request;
  */
 
 /*
-// 8. Named Routing ()
+/// 8. Named Routing ()
 Route::view('/welcome' , 'welcome');
 Route::view('/hi/hello/learn/laravel' , 'teacher') -> name('data');
 */
@@ -127,7 +127,7 @@ Route::view("/teacher", 'teacher'); // creation of view
 
 
 /* 
-    // 1. first way associtive array
+    /// 1. first way associtive array
     Route::get("/welcome", function () {
         $courses=["php" , "javaScript" , "Cpp"]; // associative array;
         return view('student' , ['courses'=>$courses]);
@@ -135,7 +135,7 @@ Route::view("/teacher", 'teacher'); // creation of view
 */
 
 /*
-    // 2. second way Compact 
+    /// 2. second way Compact 
     Route::get("/welcome", function () {
         $courses = ["php", "javaScript", "Cpp" ,"C" , "C#"]; 
         return view('student',compact('courses'));
@@ -143,7 +143,7 @@ Route::view("/teacher", 'teacher'); // creation of view
  */
 
 /* 
-    // 3. with the use of With
+    /// 3. with the use of With
     Route::get("/welcome", function () {
         $courses = ["php", "javaScript", "Cpp", "C", "C#", "Git"];
         return view('student')->with('courses', $courses);
@@ -201,7 +201,7 @@ Route::get('/headers' , function(){
     });
 */
 /*
-    // gettign the cookies value
+    /// gettign the cookies value
     Route::get('/get_cookies', function () {
         //return request()->cookie('username');
         return Request::cookie('username');
