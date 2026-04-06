@@ -82,3 +82,10 @@ Route::get('/home' , function(){
     return redirect()->route('dashboard.page');
 });
 
+// Task 3
+use App\Http\Controllers\Uint3Task3Controller;
+Route::prefix('admin')->controller(Uint3Task3Controller::class)->group(function(){
+    Route::get('/dashboard' , 'dashboard');
+    Route::get('/profile' , 'profile');
+});
+
