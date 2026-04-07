@@ -89,3 +89,20 @@ Route::prefix('admin')->controller(Uint3Task3Controller::class)->group(function(
     Route::get('/profile' , 'profile');
 });
 
+// Task 4
+Route::get('/id/{id}' , function($id){
+    return "id is ".$id;
+})->where('id' , '[0-9]{1,3}');
+
+
+// Task 5 
+use App\Http\Controllers\Task5Controller;
+Route::get('/admin' , [Task5Controller::class , "show"])->middleware('ageChecking');
+
+// Task 6
+use App\Http\Controllers\Task6Controller;
+Route::get('/dark' , [Task6Controller::class , "show"]);
+
+// Task 7
+use App\Http\Controllers\Task7Controller;
+Route::get('/rich' , [Task7Controller::class , 'show']);
