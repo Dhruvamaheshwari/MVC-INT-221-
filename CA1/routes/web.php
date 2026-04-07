@@ -117,3 +117,20 @@ Route::controller(Task8Controller::class)->group(function(){
     // this is the globle Routing
     Route::get('/name/{name}' , 'display');
 });
+
+
+// Task 9 {basic controller}
+use App\Http\Controllers\BasicController;
+Route::get('/basiccontroller' , [BasicController::class , "show"]);
+
+// Task 10 {Invokable Controller}
+use App\Http\Controllers\InvokController;
+Route::get('/Invokablecontroller/{id}' , InvokController::class);
+
+// Task 11 {Resource Controller}
+use App\Http\Controllers\ResourseController;
+Route::resource('/resourcecontroller' , ResourseController::class);
+
+// Task 12 {Api Controller}
+use App\Http\Controllers\ApiController;
+Route::apiResource('/api' , ApiController::class);
