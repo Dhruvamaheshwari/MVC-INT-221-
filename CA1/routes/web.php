@@ -106,3 +106,14 @@ Route::get('/dark' , [Task6Controller::class , "show"]);
 // Task 7
 use App\Http\Controllers\Task7Controller;
 Route::get('/rich' , [Task7Controller::class , 'show']);
+
+// Task 8
+use App\Http\Controllers\Task8Controller;
+// Route leavle routing
+Route::controller(Task8Controller::class)->group(function(){
+    // this is the Route level Rouing
+    Route::get('/normal/{age}' , 'show')->where('age' , '[0-9]+');
+
+    // this is the globle Routing
+    Route::get('/name/{name}' , 'display');
+});
