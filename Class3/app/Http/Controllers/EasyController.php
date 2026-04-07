@@ -25,4 +25,9 @@ class EasyController extends Controller
     {
         return 'the username is '.$name;
     }
+
+    public function showView()
+    {
+        return view('demo');
+    }
 }

@@ -1,0 +1,1 @@
+<a href="{{ route('223is') }}">Click here to see named route</a>
