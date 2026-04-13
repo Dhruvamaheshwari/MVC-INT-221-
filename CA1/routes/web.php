@@ -4,6 +4,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 
+//!-------------------------------Round 1
+/** 
+
 // Task 1
 Route::get('/show/{name}' ,function($name) {
     return view('info' , compact('name'));
@@ -134,3 +137,65 @@ Route::resource('/resourcecontroller' , ResourseController::class);
 // Task 12 {Api Controller}
 use App\Http\Controllers\ApiController;
 Route::apiResource('/api' , ApiController::class);
+
+// Task 13 {time}
+Route::view('/data' , 'time');
+
+// Task 14
+Route::get('/json' , function(){
+    $studnet = [
+        "name" => "Dhruva",
+        "email" => "dhruva22@gmail.com",
+        "college" => "LPU",
+    ];
+
+    return response()->json($studnet);
+});
+
+// Task 15
+Route::get('/showroute' , function()
+{
+    return view('routing');
+});
+Route::get('/abc/def/sadf' , [BasicController::class , "show"])->name('dhruvaroute');
+Route::get('/asdf/asdf/asdf/asdf' , [BasicController::class , "show"]);
+
+*/
+
+
+
+//!-----------------------------------Round 2
+
+// Task 1 Calculator Controller
+use App\Http\Controllers\CalciController;
+Route::get('/calci/add/{a}/{b}' , [CalciController::class , 'add']);
+
+
+// Task 2: Route with Parameters
+Route::get('/display/{name}/{reg}', function($name , $reg){
+    echo $name;
+    echo $reg;
+});
+
+
+// Task 3: Custom Controller Logic
+use App\Http\Controllers\DhruvaController;
+Route::get('/fun/rev/{name}' , [DhruvaController::class,  'reverseName']);
+Route::get('/fun/num/{num}' , [DhruvaController::class , 'reverseNumber']);
+
+// Task 4: Route Constraints
+Route::get('/user/{name}/{country}' , function(){
+    return "allowed";
+})->where(['name'=> 'dhruva' , 'country' => 'india']);
+
+// using the middleware
+Route::get('/hey' , function(){
+    return "access";
+})->middleware('round2task4');
+
+// Task 5 Template Inheritance
+Route::view('/home' , 'home');
+Route::view('/about' , 'about');
+
+// Task 6 {sharing data globally}
+

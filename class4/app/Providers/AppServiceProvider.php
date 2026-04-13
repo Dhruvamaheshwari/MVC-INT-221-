@@ -4,10 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\View;
-
-
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,13 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // globle routing
-        //Route::pattern('name' , '[a-zA-Z]+');
-
-       // view::share('data' , "Dhruva Maheshwai is the Best");
-        $time = date("h:i:s");
-        view::share('time' , $time);
-
-        view::share('siteName' , 'my web site');
+        //
     }
 }

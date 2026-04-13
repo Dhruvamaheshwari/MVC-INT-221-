@@ -33,6 +33,17 @@ to create the middleware -> php artisan make:middleware MiddlewareIS
 to create Globlae middleware -> php artisan make:middleware GlobalIsMiddleware
 
 
+php artisan make:model DemoIs -mcr
 
 
-x
+// secure-Rotue
+to install the breeze {for secureRotue} -> composer require laravel/breeze --dev
+go inside the project and run => php artisan breeze:install
+                                blade
+                                no
+                                Pest
+
+
+------------------------------------------------------------------------------------------------------
+                                     ⁡⁢⁢⁢ ​‌‌​‌‌‍​‌‌‍‍‍UNIT - 4⁡​
+
