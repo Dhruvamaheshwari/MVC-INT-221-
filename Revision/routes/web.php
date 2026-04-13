@@ -129,6 +129,7 @@ use App\Http\Controllers\MiddlewareIsController;
 Route::get('/rich', [MiddlewareIsController::class, "show"])->middleware('checkRoleandAge');
  */
 
+/**
 //? import the construct Controllers
 use App\Http\Controllers\ConstructController;
 Route::get('/construct' , [ConstructController::class , 'show']);
@@ -147,18 +148,19 @@ Route::view('/signout' , 'signout');
 Route::view('/about' , 'about');
 Route::view('/contact' , 'contact');
 Route::view('/blog' , 'blog');
+ */
 
-
+/*
 //? Routing with condition using the group
 // this is the Router level routing;
 use App\Http\Controllers\ConditionController;
-/*
+
 Route::controller(ConditionController::class)->group(function(){
     Route::get('/username/{name}' , 'username')->where('name' , '[a-zA-Z]+');
     Route::get('/userage/{age}' , 'userage')->where('age' , '[0-9]+');
     Route::get('/userid/{userid}' , 'userid')->where('userid' , '[0-9a-zA-Z]+');
 });
- */
+
 
 // this is the Globle level routing;
 Route::controller(ConditionController::class)->group(function(){
@@ -188,3 +190,11 @@ Route::get('/print' , function(){
     // return view('success' , compact('user')); /// 1 way to return the view with the value
     return view('success' , ['user' => $user]); /// 2 way to return the view with the value
 });
+  */
+
+//!--------------------------------------------- UNIT - 4 ------------------------------------------------
+
+use App\Http\Controllers\MyFormController;
+Route::get('/form' , [MyFormController::class , "show"]);
+Route::post('/submit' , [MyFormController::class , "takeData"]);
+
