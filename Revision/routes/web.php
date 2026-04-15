@@ -195,6 +195,13 @@ Route::get('/print' , function(){
 //!--------------------------------------------- UNIT - 4 ------------------------------------------------
 
 use App\Http\Controllers\MyFormController;
-Route::get('/form' , [MyFormController::class , "show"]);
-Route::post('/submit' , [MyFormController::class , "takeData"]);
 
+Route::get('/form', [MyFormController::class, "show"]);
+Route::post('/submit', [MyFormController::class, "takeData"]);
+
+
+//* upload the File
+use App\Http\Controllers\FileUploadController;
+
+Route::get('/uploadshow', [FileUploadController::class, "show"]);
+Route::post('/upload', [FileUploadController::class, "fileUpload"]);
