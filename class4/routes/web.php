@@ -17,6 +17,28 @@ use Illuminate\Support\Facades\Route;
  */
 
 use App\Http\Controllers\FormIsController;
+
+/**
 Route::get('/form' , [FormIsController::class , 'show']);
 
 Route::post('/submit' , [FormIsController::class , "submitForm"]);
+ */
+
+Route::get('/form', [FormIsController::class, 'show']);
+Route::post('/submit', [FormIsController::class, "submitForm"]);
+
+
+use App\Http\Controllers\UploadIsController;
+
+Route::get('/display', [UploadIsController::class, "display"]);
+Route::post('/upload', [UploadIsController::class, "upload"]);
+
+
+Route::get('/', function () {
+   return view('homeIs');
+});
+
+
+use APP\Http\Controllers\Task1Controller;
+
+Route::get('/task1', [Task1Controller::class, "show"]);
