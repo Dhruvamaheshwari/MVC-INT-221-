@@ -202,6 +202,13 @@ Route::post('/submit', [MyFormController::class, "takeData"]);
 
 //* upload the File
 use App\Http\Controllers\FileUploadController;
+use Symfony\Component\CssSelector\Node\FunctionNode;
 
 Route::get('/uploadshow', [FileUploadController::class, "show"]);
 Route::post('/upload', [FileUploadController::class, "fileUpload"]);
+
+
+//* Laravel Localization {or diff. language me change krna}
+Route::get('/' , function(){
+    return view('languagechange');
+});
