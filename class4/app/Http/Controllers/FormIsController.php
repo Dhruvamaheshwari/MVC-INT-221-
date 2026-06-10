@@ -15,9 +15,6 @@ class FormIsController extends Controller
     // yaha Reques $request likha pda ga
     public function submitForm(Request $request)
     {
-
-
-
         // inbuild function for validation
         $request->validate([
             'name' => 'required',
@@ -27,7 +24,8 @@ class FormIsController extends Controller
 
 
         /**
-         // {iise hi use kro} 1 way to take the input via a name attribute (basic method) {this is important iise hi use kro}
+         // {iise hi use kro} 1 way to take the input via a name attribute (basic method)
+         // {this is important iise hi use kro}
             // add first request data retrieval method
             $name = $request->name;
             $email = $request->email;

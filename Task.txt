@@ -37,3 +37,13 @@ task 6 => now you have to create 1 main folder which is mainlayout inside that
 
 --------------------------------------------------------------------------------------------------------------------------
 UNIT - 4
+
+task 1 : create a form in which you have to add name , pass ,  and conf. pass, there pass and conf pass should match the pass must contain 4 num and 4 alph and 2 spe.char  using inbuild validation
+
+
+add 5 entry in the insert function update the 4th entry there should we 4 col => id , name  ,occupation , phone nO.  you have to update 
+last entry with not found in all table and finally disply the updated table
+
+
+
+Task 

@@ -11,7 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+
+        // register the middleware ye web isliye likha h ki pure website pe lg jaye cookie and session or csrf pe bhi lg jaye ga
+        $middleware->appendToGroup('web' , \App\Http\Middleware\setLocale::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

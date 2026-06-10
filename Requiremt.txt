@@ -47,3 +47,112 @@ go inside the project and run => php artisan breeze:install
 ------------------------------------------------------------------------------------------------------
                                      ⁡⁢⁢⁢ ​‌‌​‌‌‍​‌‌‍‍‍UNIT - 4⁡​
 
+// to creat the form => php artisan make:view MyformIs
+
+
+step 1: create resource->lang->language folder(could og different languages) -> messages.php (add key and value in messages.php)
+step 2: create Basic home blade , add extraction of key's value
+        create a dropdown list, add those option which u have include in lang folder
+setp 3: creat middleware SetLocale(Try to use CamelCase)
+        import =>  use Illuminate\Support\Facades\App;
+        register middleware in app.php
+
+
+
+// Send mail
+1. set env file
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.gmail.com
+    MAIL_PORT=587
+    MAIL_USERNAME=maheshwaridhruva0@gmail.com
+    MAIL_PASSWORD=znftdfzfceqhshui
+    MAIL_ENCRYPTION=tls        // ye line khud se add ki h pehle se nhi aati h;
+    MAIL_FROM_ADDRESS="maheshwaridhruva0@gmail.com"
+2. create mail via a php artisan using the commna => php artisan make:main TestingIsMail
+3.create emialcontroller and add mandatory import
+    use App\Mail\TestingIsMail; // mandatory to import
+    use Illuminate\Support\Facades\Mail; // madatory to import
+4. creat the view and access the variable used in blade templeate
+5. go to security page of gmail , turn on 2factor authentication 
+6. search for app passwoed add,app name click on create 16 char passwoed
+    generate ,copy and past in it .env file
+
+
+// Task 1
+
+
+=============================== unit 6 ====================================
+// using the mySql
+1.   .env me line 23 to 28 change kro
+
+code first approch // code to database
+database first approch // database to code
+
+2. php artisan make:migration create_students_table
+3. php artisan migrate
+4. php artisan make:controller studentController
+5. web.php
+6. config => app.php
+
+
+
+// Seeders
+php artisan make:migration create_myseed_table
+php artisan make:seeder IsSeeder
+php artisan db:seed // ye db ki seed bana ke db me add krta h;
+
+1. open xamp server start apache adn mySql open admin page of mySql
+2 . open .env file update database name
+3. create migeration with Command
+4. php artisan migrate create_dbseed_table
+5. open dbseed migration , then add 2 or 3 columns as per your choice
+6. after that run php artisan migrate:fresh
+7, create seeder php artisan make:seeder IsSeeder
+8. add query builder code there, import use Illuminate\Support\Facades\DB;
+=========add query===========
+9. Open databaseSeeder paresent under database folder
+10. call your create seeder there - $this->call(IsSeeder::class);
+11. finally run your seed - php artisan db:seed
+
+
+// Factories
+php artisan make:model IsModel
+php artisan make:factory IsFactory --model=IsModel
+
+
+
+// CRUD {sql}
+1. turn on xamp start apache mySql go to admin page of mySql
+2. go to your project .env file 
+3. add connection and db name
+4. create migration php artisan make:migeration create_placement_table
+5. add columns in migration , then php artisan migeration:fresh
+6. creat controller -add 6 fun: called show,insert,edit,update,delete,read
+7. creat 3 view placementform ,edit,read
+8. add suitable routes and imports
+9. serve your project
+
+
+// MongoDb
+setup the .env file => 24 to 29;
+command => composer require mongodb/laravel-mongodb --with-all-dependencies
+php artisan make:controller IsController --resource
+php artisan make:model Is 
+
+
+// API => Step form Crud using api 
+1. Start Xampp turn on apache start mongodb
+2. go to .env file configure mongodb connection
+3. go to config folder , under config there is databae.php add mongodb connection
+4. always use composer require mongodb/laravel-mongodb --with-all-dependencies
+        note: if you are creating new project then this is madatory
+5. php artisan cache:clear , php artisan config:clear
+6. create api.php under route folder ,add Route::apiResource() and suitable import
+7. create model class and add connection , collectionn(table name) and fillable(columns name)
+        Node : always use mongodb in model
+8. create your controller with --api , then 5 function will be created by default
+9. Update bootstrap app.php file , add the apis rotue there
+10. Execute your code with 127.0.0.1.8000/api/data
+11. Test that contect on postman use post request then go to body add data
+        finally re run your url, entries will be showing in browser
+12. check added entries on mongodb table.

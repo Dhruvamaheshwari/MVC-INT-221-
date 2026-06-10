@@ -9,6 +9,7 @@ Welcome to the workspace for the MVC (INT-221) course. This repository contains 
 - **CA1/** - Continuous Assessment 1 project.
 - **Class 2/** - Second class project exercises.
 - **Class3/** - Third class project exercises.
+- **class4/** - Fourth class project exercises.
 - **Revision/** - Practical revision and middleware/controller exercises.
 - **SecureRoute/** - Project demonstrating secure routing with Laravel Breeze.
 

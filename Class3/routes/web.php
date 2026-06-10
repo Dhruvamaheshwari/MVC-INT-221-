@@ -119,7 +119,7 @@ Route::get('/def' , function(){
 
 
 // Domain Routing
-Route::domain('admin.localhost')->group(function(){
+Route::domain('admin.localhost')->group(function () {
     Route::get('/admin', function () {
         return "i am admin";
     });
@@ -137,10 +137,11 @@ Route::domain('admin.localhost')->group(function(){
 Route::get('/' , function(){
     return view('home');
 });
+
  Route::get('/adc/def/ghi/jkl' , [EasyController::class , "showView"])->name('223is');
  */
 
- /*
+/*
 /// URL Generation
 Route::get('/' , function(){
     return view('url');
@@ -148,7 +149,7 @@ Route::get('/' , function(){
  */
 
 // Generating Framework -> named Route / url / action
-Route::get('/show' , [EasyController::class , "show"]);
-Route::get('/showView' , [EasyController::class , "showView"]);
+Route::get('/show', [EasyController::class, "show"]);
+Route::get('/showView', [EasyController::class, "showView"]);
 
 // Generation ShortCute -> ye bs command h middleware controller banaaki only
